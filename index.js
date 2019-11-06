@@ -43,7 +43,7 @@ router.post('/test', function (req, res) {
         console.log(e);
     }
 });
-
+module.exports =app;
 
 app.listen(4000);
 console.log('aplicacion enable => http://localhost:4000');
