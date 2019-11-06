@@ -2,9 +2,11 @@
   "name": "pruebanodejs",
   "version": "1.0.0",
   "description": "pruebatec",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "compila": "tsc && node /build/src/index.js",
+    "tsnode": "ts-node index.ts"
   },
   "keywords": [],
   "author": "fred1code",
@@ -12,9 +14,11 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "ts-node": "^8.4.1",
     "typescript": "^3.7.2"
   },
   "devDependencies": {
+    "@types/express": "^4.17.2",
     "babel-cli": "^6.26.0",
     "babel-jest": "^24.9.0",
     "babel-polyfill": "^6.26.0",

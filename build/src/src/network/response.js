@@ -1,21 +1,18 @@
-exports.success = function (req, res, message, status) {
+"use strict";
+function success(req, res, message, status) {
     res.status(status || 200).send({
         response: {
             data: operaciones(message), error: [],
         },
-
     });
 }
-
-exports.error = function (req, res, message, status, details) {
-    console.log(details);
+function error(req, res, message, status) {
+    //console.log(details);
     res.status(status || 500).send({
         data: '',
         error: [message],
     });
 }
-
-
 const operaciones = (array) => {
     const suma = array.reduce((curr, acc) => (curr + acc));
     const resta = array.reduce((curr, acc) => (curr - acc));
@@ -26,8 +23,6 @@ const operaciones = (array) => {
         resta: resta,
         multiplicacion: multiplicacion,
         division: division,
-    }
-
-}
-
-//module.exports = operaciones;
+    };
+};
+module.exports = { error: error, success: success };

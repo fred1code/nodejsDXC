@@ -1,5 +1,5 @@
 //import { operaciones } from '../network/response';
-const operaciones = require('../network/response');
+const operaciones = require('../src/network/response');
 
 const array = [4, 5, 6, 7, 8];
 
