@@ -30,4 +30,4 @@ const operaciones = (array) => {
 
 }
 
-module.exports = operaciones;
+//module.exports = operaciones;

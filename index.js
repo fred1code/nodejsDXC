@@ -2,9 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const response = require('./network/response');
 
-
 const router = express.Router();
-
 var app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
@@ -19,7 +17,6 @@ app.use('*', function(req, res){
 
 router.get('/test', function (req, res) {
     try {
-
         console.log(req.query);
         var array = JSON.parse(req.query.array);
         if (Array.isArray(array)) {
@@ -35,7 +32,6 @@ router.get('/test', function (req, res) {
 
 router.post('/test', function (req, res) {
     try {
-
         var array = JSON.parse(req.body);
         if (Array.isArray(array)) {
             response.success(req, res, array, 200);
