@@ -16,7 +16,7 @@ exports.error = function (req, res, message, status, details) {
 }
 
 
-function operaciones(array) {
+const operaciones = (array) => {
     const suma = array.reduce((curr, acc) => (curr + acc));
     const resta = array.reduce((curr, acc) => (curr - acc));
     const division = array.reduce((curr, acc) => (curr / acc));
@@ -30,3 +30,4 @@ function operaciones(array) {
 
 }
 
+module.exports = operaciones;
