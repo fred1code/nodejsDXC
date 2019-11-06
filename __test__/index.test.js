@@ -1,7 +1,16 @@
 const request = require('supertest');
 const app = require('../index');
 
-describe('prueba server metodo get', () => {
+describe('prueba rais /', () => {
+    test('respuesta / ', done => {
+        request(app).get('/').then((response) => {
+            expect(response.statusCode).toBe(500);
+            done();
+        });
+    });
+});
+
+describe('prueba server metodo get 200', () => {
     test('responder a el metodo GET', done => {
         request(app).get('/test?array=[4,5,6,7,8]').then((response) => {
             expect(response.statusCode).toBe(200);
@@ -10,7 +19,7 @@ describe('prueba server metodo get', () => {
     });
 });
 
-describe('prueba server metodo get parametros mal', () => {
+describe('prueba server metodo get parametros mal 422', () => {
     test('responder a el metodo GET', done => {
         request(app).get('/test?array=[4,5,6,7,8').then((response) => {
             expect(response.statusCode).toBe(422);
@@ -19,7 +28,7 @@ describe('prueba server metodo get parametros mal', () => {
     });
 });
 
-describe('prueba server metodo get con error', () => {
+describe('prueba server metodo get con error 500', () => {
     test('responder a el metodo GET', done => {
         request(app).get('/algo').then((response) => {
             expect(response.statusCode).toBe(500);
