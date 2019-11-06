@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const response = require('./network/response');
-//const response = require('./metodos/metodo.ts');
+
 
 const router = express.Router();
 
@@ -49,11 +49,8 @@ router.post('/test', function (req, res) {
 });
 
 
-app.use('/app', express.static('public'));
-
-
 app.listen(4000);
-console.log('aplicacion enable => http://localhost:3000');
+console.log('aplicacion enable => http://localhost:4000');
 
 
 
