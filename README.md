@@ -1,12 +1,16 @@
 # nodejsDXC
 operaciones con arrays 
 
-
+## branch
+existen 2 ramas  la rama master es el proyecto hecho con typescrip y la rama vanilla es usando javascript
+de manera  nativa
 
 después de hacer git clone debemos de pasarle el npm install para que nos cree la carpeta
 node_modules con las dependencias que necesitamos para el proyecto,
-corremos con el comando nodemon si tenemos el paquete o con node  index.js
+corremos el comando tsc que nos creara una carpeta build  donde estará el javascript nativo de nuestro proyecto
+con el comando nodemon si tenemos el paquete o con node  build/src/index.js
 esto nos abrira la aplicacion en el localhost puerto 4000 localhost:4000/
+
 
 
 ## probar
