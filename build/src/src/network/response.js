@@ -25,4 +25,4 @@ const operaciones = (array) => {
         division: division,
     };
 };
-module.exports = { error: error, success: success };
+module.exports = { error: error, success: success, operaciones: operaciones };

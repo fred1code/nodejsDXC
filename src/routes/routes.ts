@@ -1,4 +1,5 @@
 import {Router} from 'express';
+import helmet from 'helmet';
 // @ts-ignore
 //import {Responses} from "../network/response";
 import response = require("../network/response");
@@ -6,7 +7,7 @@ import response = require("../network/response");
 const router: Router = Router();
 //const response = Responses;
 
-
+router.use(helmet());
 router.get('/', (req: any, res: any) => {
     try {
         const array = JSON.parse(req.query.array);
