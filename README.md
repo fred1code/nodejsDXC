@@ -18,8 +18,8 @@ esto nos abrira la aplicacion en el localhost puerto 4000 localhost:4000/
 esta api  solo acepta 2 métodos los cuales son post y get en la ruta ** /test**
 con get recibe un array por url ejemplo [localhost:4000/test?array=[1,2,3,4,5]](http://localhost:4000/test?array=[1,2,3,4,5] "localhost:4000/test?array=[1,2,3,4,5]")
 con post  el array  se manda por el  body  en texto plano ejemplo: [1,2,3,4,5]
-[![post request](post "post request")](https://ibb.co/C9Z7RDW "post request")
-[![get request](get "get request")](https://ibb.co/C9bGQg4 "get request")
+[![post request](post "post request")](http://img.fenixzone.net/i/HiSsFEW.png "post request")
+[![get request](get "get request")](http://img.fenixzone.net/i/RfUOHFs.png "get request")
 
 ## Testing con jest.js
 en la carpeta de `__test__ ` tenemos los script de testing para este proyecto utilice
