@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const response = require('./network/response');
-
+const helmet = require('helmet');
 const router = express.Router();
 var app = express();
 
@@ -9,9 +9,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 //app.use(bodyParser.json());
 app.use(bodyParser.text());
 //app.use(bodyParser.raw());
+router.use(helmet());
 app.use(router);
 
-app.use('*', function(req, res){
+app.use('*', function (req, res) {
     response.error(req, res, 'internal_server_error', 500);
 });
 
@@ -43,7 +44,7 @@ router.post('/test', function (req, res) {
         console.log(e);
     }
 });
-module.exports =app;
+module.exports = app;
 
 app.listen(4000);
 console.log('aplicacion enable => http://localhost:4000');
