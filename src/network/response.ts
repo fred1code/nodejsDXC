@@ -32,4 +32,4 @@ const operaciones = (array: any) => {
 
 };
 
-export = {error: error, success: success};
+export = {error: error, success: success, operaciones: operaciones};
